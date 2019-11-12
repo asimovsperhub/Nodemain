@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+	<!-- hero area -->
+	<!--轮播图区域-->
+	<div class="hero-area hero-bg wave-bg">
+		<div class="container">
+			<div class="">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="hero-text">
+						<div class="hero-text-tablecell">
+
+
+							<!--显示ip-->
+<!--							<ul>-->
+<!--								<li>User:{{ user }}</li>-->
+<!--								<li>User_Agent:{{ user_agent }}</li>-->
+<!--								<li>IP Address:{{ ip }}</li>-->
+<!--							</ul>-->
+							<form action="{{ login }}" method='post'>
+								{% if  messages %}
+									{% for  mes  in messages %}
+								<a style="text" color="red">{{ mes }}	</a>
+									{% endfor %}
+								{% endif %}
+								{% csrf_token %}
+								{{ form }}
+								<button type="submit" >登陆</button>
+
+							</form>
+							<button><a href='/pwdforget/'> 忘记密码 </a></button>
+							<button><a href='/register/'> 注册 </a></button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+                           <form   action="{{ forgetemail }}" method="post">
+                                    {% csrf_token %}
+
+								    {{ form.email }}
+                                    <button type="submit">发送邮箱验证</button>
+                            </form>
+
+
+
+
+
+<!--                            <form action="{{ pwdforget }}" method="post">-->
+
+<!--                                    {% csrf_token %}-->
+<!--                                    {{ form.newpwd }}-->
+<!--                                    {{ form.repwd  }}-->
+<!--                                    {{ form.code }}-->
+<!--                                <button type="submit" >重置密码</button>-->
+<!--                            </form>-->
+</body>
+</html>

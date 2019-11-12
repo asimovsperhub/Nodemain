@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block  content %}
+
+
+<div class="hero-area hero-bg wave-bg">
+		<div class="container">
+			<div class="">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="hero-text">
+						<div class="hero-text-tablecell">
+
+
+							    {% for new  in  news %}
+
+                                <h5>标题：{{ new.title }}</h5>
+                                <li>{{ new.header }}</li>
+                                    {{ new.text }}
+                                <li>阅读数：{{ new.readcount }}</li>
+
+                                {% endfor %}
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+</body>
+</html>

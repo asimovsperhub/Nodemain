@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+	<!-- hero area -->
+	<!--轮播图区域-->
+	<div class="hero-area hero-bg wave-bg">
+		<div class="container">
+			<div class="">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="hero-text">
+						<div class="hero-text-tablecell">
+                            <div class="set-floor">
+                                <div class="row">
+
+                                    <div>
+                                        <img  src="">
+                                    </div>
+                                    <div>
+
+                                    </div>
+                                    <div>
+
+                                    </div>
+                                 </div>
+                             </div>
+<!--                            &lt;!&ndash;显示ip&ndash;&gt;-->
+<!--                            <ul>-->
+<!--                                <li>用户信息</li>-->
+<!--                                <li>Email:{{ email }}</li>-->
+<!--                                <li>User:{{ user }}</li>-->
+<!--                                <li>User_Agent:{{ user_agent }}</li>-->
+<!--                                <li>IP Address:{{ ip }}</li>-->
+<!--                            </ul>-->
+                            <button><a href="/changepwd/">修改密码</a></button>
+                            <button><a href="/loginlog/"> 查看用户信息 </a></button>
+                            <button><a href='/pwdforget/'> 忘记密码 </a></button>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+{% endblock %}
+</body>
+</html>

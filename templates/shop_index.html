@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+SHOPING
+                                {% load static %}
+                                {% for  food in  foods %}
+
+                                <li>商品：{{ food.foods_name }}</li>
+                                <li>单价：{{ food.foods_price }}</li>
+                                <li>信息：{{ food.foods_mess }}</li>
+                                <div  style="width:50,heigth:50,overflow:hidden">
+                                <img style="max-width:100%,left:0" src="/{{ food.foods_img }}">
+                                <button><a href="buy/{{ food.foods_name }}">购买 {{ food.foods_name }} </a></button>
+                                </div>
+                                {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% load static %}
+<!-- <h3>注册</h3>-->
+<!-- <form action="/register/" method="post" novalidate>-->
+<!--    {% csrf_token %}-->
+<!--     {{ forms }}-->
+<!--&lt;!&ndash;   <p>{{ RegisterForm. }}：{{ form.username }} <span>{{ form.username.errors.0 }}</span></p>&ndash;&gt;-->
+<!--   <p>密码：{{ lRegisterForm.pwd }}-->
+<!--     <span>{{ RegisterForm.pwd.error_messages.0 }}</span></p>-->
+<!--   <p>确认密码：{{ RegisterForm.repwd }}-->
+<!--     <span>{{ RegisterForm.repwd.error_messages.0 }}</span></p>-->
+<!--   <p>邮箱：{{ RegisterForm.email }}-->
+<!--     <span>{{ RegisterForm.email.error_messages.0 }}</span></p>-->
+<!--&lt;!&ndash;   <p>手机号：{{ form.tel }}&ndash;&gt;-->
+<!--&lt;!&ndash;     <span>{{ form.tel.errors.0 }}</span></p>&ndash;&gt;-->
+<!--   <p><input type="submit" value="提交"></p>-->
+<!--{% load static %}-->
+<!--<form class="form-login" action="/login/" method="post">-->
+<!--    {{ forms }}-->
+<!--    <h3 class="text-center">注册</h3>-->
+
+<!--          <div class="form-group">-->
+<!--            {{ registerform.email.label }}-->
+<!--            {{ RegisterForm.email }}-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            {{ RegisterForm.pwd.label }}-->
+<!--            {{ RegisterForm.pwd }}-->
+<!--          </div>-->
+
+<!--          <div class="form-group">-->
+<!--            {{ RegisterForm.repwd.label }}-->
+<!--            {{ RegisterForm.repwd }}-->
+<!--          </div>-->
+<!--    {{ RegisterForm.captcha }}-->
+<!-- </form>-->
+{% block title %}
+        My amazing blog
+{% endblock %}
+
+
+{% block content %}
+	<!-- hero area -->
+	<!--轮播图区域-->
+	<div class="hero-area hero-bg wave-bg">
+		<div class="container">
+			<div class="">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="hero-text">
+						<div class="hero-text-tablecell">
+						<div>
+                            <form action="{{ register }}" method="post">
+                                {% csrf_token %}
+								{{ form }}
+
+
+                                <input type="submit" value="注册" />
+                            </form>
+
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- end hero area -->
+
+	<!--定义基础模版的默认内容空间-->
+
+	<!--        <div>这里是默认内容，所有继承自这个模板的，如果不覆盖就显示这里的默认内容。</div>-->
+
+
+
+
+{% endblock %}

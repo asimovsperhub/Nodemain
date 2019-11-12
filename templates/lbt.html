@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+
+</head>
+<body>
+<!--创建轮播容器-->
+
+  <!--添加多个轮播页面-->
+<div class="slideshow-container"> <!-- 轮播容器开始 -->
+        {% load static %}
+        {% for photo  in  photos %}
+        <!-- 轮播页面 -->
+        <div class="slide">
+            <div class="slideIndex"></div> <!-- 展示页码 -->
+            <a href="{{ photo.href }}" title="{{ photo.title }}">
+            <img  src="{{ photo.src }}"><!-- 轮播图片 -->
+            </a>
+        </div>
+        {% endfor %}
+</div> <!-- 轮播容器结束 -->
+
+</body>
+<!--      {% load static %}-->
+<!--      {% for photo  in  photos %}-->
+
+<!--      <a href="{{ photo.href }}" title="{{ photo.title }}">-->
+<!--          <li style="background:url('{{ photo.src }}') center 0"></li>-->
+<!--      </a>-->
+
+<!--      {% endfor %}-->
